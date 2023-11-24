@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
     <title>GEEAD Técnico em Desenvolvimento de Sistemas</title>
     <style>
         body, h1,h2,h3,h4,h5,h6 ,p{font-family: "Montserrat", sans-serif}
+
+        footer{
+            background-color:   rgb(0, 0, 0);
+            width: 100%;
+            height: 20%;
+        }
 
         #main{
             margin-left: 10px;
@@ -18,7 +23,23 @@
         .w3-sidebar{
             width: 110px;
             background: #222;
+            
         }
+
+        .Person {
+            float: left; /* Define a imagem para flutuar à esquerda */
+            width: 30%;
+            margin: 10px; /* Ajustado para 10px para espaçamento mais sutil */
+            border-radius: 10px;
+            border: 2px solid aqua; /* Adiciona uma borda de 2px sólida com a cor aqua */
+        }
+
+        .docente-container {
+            margin-top: 30px; /* Ajuste o valor conforme necessário para obter a separação desejada */
+            margin-top: 200px;
+            border-right: 2px solid aqua; /* Adiciona uma borda direita */
+            padding-right: 10px; /* Adiciona um espaçamento à direita para separar a borda da informação */
+}
     </style>
 
 </head>
@@ -48,9 +69,15 @@
                     <p>Grade Curricular</p>
                 </a>
 
+                <a href="#Docentes" class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-
+                hover-text-cyan w3-text-white">
+                    <i class="fa fa-users  w3-xlarge"></i>
+                    <p>Docentes</p>
+                </a>
+
                 <a href="#mercado" class="w3-bar-item w3-button w3-padding-large w3-hover-black w3-
                 hover-text-cyan w3-text-white">
-                    <i class="fa fa-handshake w3-xlarge"></i>
+                    <i class="fa fa-briefcase w3-xlarge"></i>
                     <p>Mercado de Trabalho</p>
                 </a>
 
@@ -175,6 +202,48 @@
             </div>
         </div>
 
+        <div class="w3-content" id="Docentes">
+            <h2 class="w3-text-cyan">Docentes</h2>
+            <hr style="width:200px" class="w3-opacity">
+        
+            <div class="w3-center docente-container">
+                <img src="imgThisPersonDoesNotExist/person1.jpg" alt="" class="Person">
+                <div>
+                    <h2 class="w3-text-cyan">João Silva</h2>
+                    <h3 class="w3-text-cyan">Formação Acadêmica</h3>
+                    <p>Mestrado em Ciência da Computação - Universidade Federal de São Paulo (UNIFESP)</p>
+                    <p>Graduação em Engenharia de Software - Universidade Estadual de Campinas (UNICAMP)</p>
+                    <h3 class="w3-text-cyan">Atuação Profissional</h3>
+                    <p>Desenvolvedor Sênior na Empresa XYZ, especializado em arquitetura de sistemas distribuídos.</p>
+                    <p>Consultor em Tecnologia da Informação na Empresa ABC, com foco em segurança de dados.</p>
+                </div>
+            </div>
+        
+            <div class="w3-center docente-container">
+                <img src="imgThisPersonDoesNotExist/person2.jpg" alt="" class="Person">
+                <div>
+                    <h2 class="w3-text-cyan">Carlos Santos</h2>
+                    <h3 class="w3-text-cyan">Formação Acadêmica</h3>
+                    <p>Graduação em Sistemas de Informação - Universidade Federal do Rio de Janeiro (UFRJ)</p>
+                    <h3 class="w3-text-cyan">Atuação Profissional</h3>
+                    <p>Desenvolvedor Full Stack na Empresa Tech Solutions, com expertise em frameworks modernos.</p>
+                </div>
+            </div>
+        
+            <div class="w3-center docente-container">
+                <img src="imgThisPersonDoesNotExist/person3.jpg" alt="" class="Person">
+                <div>
+                    <h2 class="w3-text-cyan">Maria Oliveira</h2>
+                    <h3 class="w3-text-cyan">Formação Acadêmica</h3>
+                    <p>Doutorado em Engenharia de Software - Universidade de São Paulo (USP)</p>
+                    <p>Bacharelado em Ciência da Computação - Pontifícia Universidade Católica (PUC-SP)</p>
+                    <h3 class="w3-text-cyan">Atuação Profissional</h3>
+                    <p>Professora Associada no Departamento de Informática da Universidade Estadual de São Paulo (UNESP)</p>
+                    <p>Pesquisadora em Inteligência Artificial, com diversas publicações em conferências internacionais.</p>
+                </div>
+            </div>
+        </div>
+
         <div class="w3-padding-64 w3-content w3-" id="mercado">
             <h2 class="w3-text-cyan">Mercado de Trabalho</h2>
             <hr style="width:200px" class="w3-opacity">
@@ -199,7 +268,7 @@
             </div>
         </div>
 
-        <div class="w3-padding-128 w3-content w3-text-grey" id="contato">
+        <div class="w3-padding-128 w3-content w3-text-white" id="contato">
             <h2 class="w3-text-cyan">Contato</h2>
             <hr style="width:200px" class="w3-opacity">
             <div class="w3-section">
@@ -212,23 +281,23 @@
             </div>
         </div>
 
-        <p>Entre em contato:</p>
-        <form>
+        <p class="w3-padding-128 w3-content w3-text-grey">Entre em contato:</p>
+        <form class="w3-content">
             <p>
-                <input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Nome">
+                <input class="w3-input w3-padding-128 " type="text" placeholder="Nome" required name="Nome">
             </p>
             <p>
-                <input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email">
+                <input class="w3-input w3-padding-128 " type="text" placeholder="Email" required name="Email">
             </p>
             <p>
-                <input class="w3-input w3-padding-16" type="text" placeholder="Assunto" required name="Assunto">
+                <input class="w3-input w3-padding-128 " type="text" placeholder="Assunto" required name="Assunto">
             </p>
             <p>
-                <input class="w3-input w3-padding-16" placeholder="Menssagem" required name="Mensagem">
+                <input class="w3-input w3-padding-16 " placeholder="Menssagem" required name="Mensagem">
             </p>
             <p>
-                <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-                    <i class="fa fa-paper-plane"></i> Enviar mensagem
+                <button class="w3-button w3-light-grey w3-padding-large " type="submit">
+                    <i class="fa fa-paper-plane "></i> Enviar mensagem
                 </button>
             </p>
         </form>
@@ -237,24 +306,23 @@
 
     <footer class="w3-content w3-padding-64 w3-text-cyan w3-xlarge w3-center">
         <a href="https://www.facebook.com/centropaulasouza/" target="_blank">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-facebook-official w3-margin" aria-hidden="true"></i>
         </a>
-        <a href="http://geead.cps.sp.gov.br/" target="_blank" style="background-color: aliceblue;">
+        <a href="https://www.instagram.com/centropaulasouza/" target="_blank">
             <i class="fa fa-instagram w3-hover-opacity"></i>
-        </a>
-        <a href="http://geead.cps.sp.gov.br/" target="_blank">
-            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
         </a>
         <a href="https://twitter.com/paulasouzasp" target="_blank">
             <i class="fa fa-twitter" aria-hidden="true"></i>
         </a>
         <a href="https://www.linkedin.com/company/centropaulasouza/" target="_blank">
-            <i class="fa fa-linkedin w3-hover-opacity"></i>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
         </a>
-        <p class="w3-medium">Powered by
-            <a href="https://portalgeead.cps.sp.gov.br/" target="_blank" class="">GEEAD</a>
-        </p>
-    </footer>
 
+        <p class="w3-medium w3-margin-top">Powered by
+            <a href="https://portalgeead.cps.sp.gov.br/" target="_blank">GEEAD
+            </a>
+        </p>
+ 
+    </footer>
 
 </html>
