@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Sampaio">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
     <title>GEEAD Técnico em Desenvolvimento de Sistemas</title>
@@ -22,24 +23,51 @@
     
         .w3-sidebar{
             width: 110px;
-            background: #222;
-            
+            background: #222; 
         }
 
         .Person {
-            float: left; /* Define a imagem para flutuar à esquerda */
-            width: 30%;
+            width: 20%;
             margin: 10px; /* Ajustado para 10px para espaçamento mais sutil */
             border-radius: 10px;
             border: 2px solid aqua; /* Adiciona uma borda de 2px sólida com a cor aqua */
         }
 
+        #Docentes {
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
         .docente-container {
-            margin-top: 30px; /* Ajuste o valor conforme necessário para obter a separação desejada */
-            margin-top: 200px;
-            border-right: 2px solid aqua; /* Adiciona uma borda direita */
-            padding-right: 10px; /* Adiciona um espaçamento à direita para separar a borda da informação */
-}
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 800px; /* Ajuste conforme necessário */
+            margin: 0 auto; /* Centraliza a div */
+        }
+
+        .docente-content {
+            flex-grow: 1; /* Ajusta para ocupar o espaço disponível entre os botões */
+            text-align: center;
+        }
+
+        .PhotoSlider__dots-item {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 auto 5px;
+        -webkit-transition: background-color .2s;
+        transition: background-color .2s;
+        -webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.6);
+        box-shadow: 0 0 4px 0 rgba(0,0,0,.6)
+        }
+
+        .PhotoSlider__dots-item.__active,.PhotoSlider__dots-item:hover {
+            background-color: #f3123c
+        }   
+
     </style>
 
 </head>
@@ -47,7 +75,7 @@
 
 <body>
 
-    <body class="w3-black">
+    <main class="w3-black">
         <nav class="w3-sidebar">
             <nav class="w3-sidebar w3-bar-block w3-center">
 
@@ -203,52 +231,63 @@
         </div>
 
         <div class="w3-content" id="Docentes">
-            <h2 class="w3-text-cyan">Docentes</h2>
-            <hr style="width:200px" class="w3-opacity">
+            <h2 class="w3-text-cyan w3-left">Docentes</h2>        
+            <hr style="width:200px;" class="w3-opcaty"></hr> 
         
-            <div class="w3-center docente-container">
-                <img src="imgThisPersonDoesNotExist/person1.jpg" alt="" class="Person">
-                <div>
-                    <h2 class="w3-text-cyan">João Silva</h2>
-                    <h3 class="w3-text-cyan">Formação Acadêmica</h3>
-                    <p>Mestrado em Ciência da Computação - Universidade Federal de São Paulo (UNIFESP)</p>
-                    <p>Graduação em Engenharia de Software - Universidade Estadual de Campinas (UNICAMP)</p>
-                    <h3 class="w3-text-cyan">Atuação Profissional</h3>
-                    <p>Desenvolvedor Sênior na Empresa XYZ, especializado em arquitetura de sistemas distribuídos.</p>
-                    <p>Consultor em Tecnologia da Informação na Empresa ABC, com foco em segurança de dados.</p>
+            <div class="docente-container" style="margin-top: 10%;">
+                <button class="w3-button w3-cyan w3-left" onclick="plusDivs(-1)">&#10094</button>
+                <div class="docente-content">
+                    <div class="slideManual">
+                        <img src="imgThisPersonDoesNotExist/person1.jpg" alt="" class="Person">
+                        <h2 class="w3-text-cyan">João Silva</h2>
+                        <h3 class="w3-text-cyan">Formação Acadêmica</h3>
+                        <p>Mestrado em Ciência da Computação - Universidade Federal de São Paulo (UNIFESP)</p>
+                        <p>Graduação em Engenharia de Software - Universidade Estadual de Campinas (UNICAMP)</p>
+                        <h3 class="w3-text-cyan">Atuação Profissional</h3>
+                        <p>Desenvolvedor Sênior na Empresa XYZ, especializado em arquitetura de sistemas distribuídos.</p>
+                        <p>Consultor em Tecnologia da Informação na Empresa ABC, com foco em segurança de dados.</p>
+                    </div>
+                    <div class="slideManual">
+                        <img src="imgThisPersonDoesNotExist/person2.jpg" alt="" class="Person">
+                        <h2 class="w3-text-cyan">Carlos Santos</h2>
+                        <h3 class="w3-text-cyan">Formação Acadêmica</h3>
+                        <p>Graduação em Sistemas de Informação - Universidade Federal do Rio de Janeiro (UFRJ)</p>
+                        <p>Mestrado em Ciência da Computação - University of California, Berkeley</p>
+                        <h3 class="w3-text-cyan">Atuação Profissional</h3>
+                        <p>Desenvolvedor Full Stack na Empresa Tech Solutions, com expertise em frameworks modernos.</p>
+                        <p>Trabalhou como desenvolvedor em empresas de tecnologia na Europa</p>
+                    </div>
+                    <div class="slideManual">
+                        <img src="imgThisPersonDoesNotExist/person3.jpg" alt="" class="Person">
+                        <h2 class="w3-text-cyan">Maria Oliveira</h2>
+                        <h3 class="w3-text-cyan">Formação Acadêmica</h3>
+                        <p>Doutorado em Engenharia de Software - Universidade de São Paulo (USP)</p>
+                        <p>Bacharelado em Ciência da Computação - Pontifícia Universidade Católica (PUC-SP)</p>
+                        <h3 class="w3-text-cyan">Atuação Profissional</h3>
+                        <p>Professora Associada no Departamento de Informática da Universidade Estadual de São Paulo (UNESP)</p>
+                        <p>Pesquisadora em Inteligência Artificial, com diversas publicações em conferências internacionais.</p>
+                    </div>
+    
+                </div>
+                <button class="w3-button w3-cyan w3-right" onclick="plusDivs(1)">&#10095</button>
+            </div>
+            <div class="PhotoSlider w3-center" style="margin-top: 5%;">
+                <div class="PhotoSlider__dots">
+                    <div class="PhotoSlider__dots-item"></div>
+                    <div class="PhotoSlider__dots-item"></div>
+                    <div class="PhotoSlider__dots-item"></div>           
+                  </div>
                 </div>
             </div>
+        </div>
         
-            <div class="w3-center docente-container">
-                <img src="imgThisPersonDoesNotExist/person2.jpg" alt="" class="Person">
-                <div>
-                    <h2 class="w3-text-cyan">Carlos Santos</h2>
-                    <h3 class="w3-text-cyan">Formação Acadêmica</h3>
-                    <p>Graduação em Sistemas de Informação - Universidade Federal do Rio de Janeiro (UFRJ)</p>
-                    <h3 class="w3-text-cyan">Atuação Profissional</h3>
-                    <p>Desenvolvedor Full Stack na Empresa Tech Solutions, com expertise em frameworks modernos.</p>
-                </div>
-            </div>
-        
-            <div class="w3-center docente-container">
-                <img src="imgThisPersonDoesNotExist/person3.jpg" alt="" class="Person">
-                <div>
-                    <h2 class="w3-text-cyan">Maria Oliveira</h2>
-                    <h3 class="w3-text-cyan">Formação Acadêmica</h3>
-                    <p>Doutorado em Engenharia de Software - Universidade de São Paulo (USP)</p>
-                    <p>Bacharelado em Ciência da Computação - Pontifícia Universidade Católica (PUC-SP)</p>
-                    <h3 class="w3-text-cyan">Atuação Profissional</h3>
-                    <p>Professora Associada no Departamento de Informática da Universidade Estadual de São Paulo (UNESP)</p>
-                    <p>Pesquisadora em Inteligência Artificial, com diversas publicações em conferências internacionais.</p>
-                </div>
-            </div>
         </div>
 
         <div class="w3-padding-64 w3-content w3-" id="mercado">
             <h2 class="w3-text-cyan">Mercado de Trabalho</h2>
             <hr style="width:200px" class="w3-opacity">
 
-            <iframe src="texto.html" frameborder="0" width="100%" height="595px" class="w3-padding-8"></iframe>
+            <iframe src="texto.html" frameborder="0" width="100%" height="595px" class="w3-padding-8" scrolling="no"></iframe>
         </div>
 
         <div class="w3-padding-64 w3-content" id="tecnologias">
@@ -326,3 +365,29 @@
     </footer>
 
 </html>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n){
+        showDivs(slideIndex += n) 
+    }
+
+    function showDivs(n){
+        var i;
+        var x = document.getElementsByClassName("slideManual");
+        var y = document.getElementsByClassName("PhotoSlider__dots-item")
+
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+
+        for (i = 0; i < x.length; i++){
+            x[i].style.display = "none";
+            y[i].style.backgroundColor = "#FFFFFF"
+        }
+
+        x[slideIndex - 1].style.display = "block";
+        y[slideIndex -1].style.backgroundColor = "#f3123c"
+    }
+</script>
